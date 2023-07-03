@@ -1,0 +1,233 @@
+
+
+
+
+#     # Constants for window size
+#     WINDOW_WIDTH = 1100
+#     WINDOW_HEIGHT = 500
+
+#     # Constants for potato size
+#     POTATO_WIDTH = 50
+#     POTATO_HEIGHT = 50
+
+#     # Initialize random seed
+#     random.seed()
+
+#     def spawn_potato():
+#         # Generate random initial position for the potato
+#         x = random.randint(0, WINDOW_WIDTH - POTATO_WIDTH)
+#         y = random.randint(0, WINDOW_HEIGHT - POTATO_HEIGHT)
+        
+#         # Create a potato image at the initial position
+#         potato_image = random.choice(potato_images)
+        
+#         if potato_image not in loaded_images:
+#             loaded_images[potato_image] = tk.PhotoImage(file=potato_image)
+        
+#         # Create a new potato label with the image
+#         potato_label = tk.Label(root, image=loaded_images[potato_image])
+
+#         potato_image.place(x=x, y=y)
+        
+#         # Store the potato's initial position and velocity
+#         potato_data = {
+#             'image': potato_image,
+#             'x': x,
+#             'y': y,
+#             'velocity_x': random.randint(-5, 5),
+#             'velocity_y': random.randint(-5, 5)
+#         }
+        
+#         # Add the potato data to the list
+#         potato_list.append(potato_data)
+
+#     def move_potatoes():
+#         for potato_data in potato_list:
+#             # Update the potato's position based on its velocity
+#             potato_data['x'] += potato_data['velocity_x']
+#             potato_data['y'] += potato_data['velocity_y']
+            
+#             # Check if the potato hits the edges of the screen
+#             if potato_data['x'] < 0 or potato_data['x'] > WINDOW_WIDTH - POTATO_WIDTH:
+#                 potato_data['velocity_x'] *= -1  # Reverse the horizontal velocity
+#             if potato_data['y'] < 0 or potato_data['y'] > WINDOW_HEIGHT - POTATO_HEIGHT:
+#                 potato_data['velocity_y'] *= -1  # Reverse the vertical velocity
+            
+#             # Move the potato image to its new position
+#             potato_data['image'].place(x=potato_data['x'], y=potato_data['y'])
+        
+#         # Schedule the next movement update
+#         root.after(10, move_potatoes)
+
+#     # Create the main window
+#     root = tk.Tk()
+#     root.title("Potato Spawn")
+#     root.geometry(f'{WINDOW_WIDTH}x{WINDOW_HEIGHT}')
+#     root.resizable(True, True)
+
+#     # Load potato icon
+#     potato_icon = tk.PhotoImage(file="potato1.png")
+
+#     # Create the potato spawn button
+#     potato_spawn_button = tk.Button(root, text="Spawn Potato", command=spawn_potato)
+#     potato_spawn_button.pack()
+
+#     # List to store potato data
+#     potato_list = []
+
+#     # Start the movement update
+#     move_potatoes()
+
+#     # Start the main event loop
+#     root.mainloop()
+
+# run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import tkinter as tk
+# import random
+
+# # Constants for window size
+# WINDOW_WIDTH = 500
+# WINDOW_HEIGHT = 500
+
+# # Constants for image size
+# IMAGE_WIDTH = 50
+# IMAGE_HEIGHT = 50
+
+# # Initialize random seed
+# random.seed()
+
+# def spawn_image():
+#     # Select a random image from the image list
+#     image = random.choice(image_list)
+    
+#     # Generate random initial position for the image
+#     x = random.randint(0, WINDOW_WIDTH - IMAGE_WIDTH)
+#     y = random.randint(0, WINDOW_HEIGHT - IMAGE_HEIGHT)
+    
+#     # Create a label widget with the image at the initial position
+#     image_label = tk.Label(root, image=image)
+#     image_label.place(x=x, y=y)
+    
+#     # Store the image's initial position and velocity
+#     image_data = {
+#         'label': image_label,
+#         'x': x,
+#         'y': y,
+#         'velocity_x': random.randint(-5, 5),
+#         'velocity_y': random.randint(-5, 5)
+#     }
+    
+#     # Add the image data to the list
+#     image_data_list.append(image_data)
+
+# def move_images():
+#     for image_data in image_data_list:
+#         # Update the image's position based on its velocity
+#         image_data['x'] += image_data['velocity_x']
+#         image_data['y'] += image_data['velocity_y']
+        
+#         # Check if the image hits the edges of the screen
+#         if image_data['x'] < 0 or image_data['x'] > WINDOW_WIDTH - IMAGE_WIDTH:
+#             image_data['velocity_x'] *= -1  # Reverse the horizontal velocity
+#         if image_data['y'] < 0 or image_data['y'] > WINDOW_HEIGHT - IMAGE_HEIGHT:
+#             image_data['velocity_y'] *= -1  # Reverse the vertical velocity
+        
+#         # Move the image label to its new position
+#         image_data['label'].place(x=image_data['x'], y=image_data['y'])
+    
+#     # Schedule the next movement update
+#     root.after(10, move_images)
+
+# # Create the main window
+# root = tk.Tk()
+# root.title("Image Throw")
+# root.geometry(f'{WINDOW_WIDTH}x{WINDOW_HEIGHT}')
+# root.resizable(True, True)
+
+# # Load images
+# image_list = [
+#     tk.PhotoImage(file="image1.png"),
+#     tk.PhotoImage(file="image2.png"),
+#     tk.PhotoImage(file="image3.png")
+# ]
+
+# # Create the image spawn button
+# image_spawn_button = tk.Button(root, text="Spawn Image", command=spawn_image)
+# image_spawn_button.pack()
+
+# # List to store image data
+# image_data_list = []
+
+# # Start the movement update
+# move_images()
+
+# # Start the main event loop
+# root.mainloop()
